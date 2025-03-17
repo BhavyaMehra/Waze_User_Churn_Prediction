@@ -41,8 +41,4 @@ The following Python libraries and dependencies are required for this project:
 
 ## Acknowledgments
 
-This project is part of Google's Advanced Data Analytics Professional Certificate Course, specifically as the end-of-course project of the "Nuts and Bolts of Machine Learning" sub-course within the broader Google Data Analytics course. As a part of this course, the project aims to apply machine learning techniques to real-world data analytics challenges and provide valuable insights.
-
-## Additional Information
-
-For detailed description about this project, including code, analysis, comments, conlusions, next steps etc please refer to the Jupyter Notebook (`Waze Churn project.ipynb`) provided in the repository.
+This project is part of Google's Advanced Data Analytics Professional Certificate Course, specifically as the end-of-course projec. As a part of this course, the project aims to apply machine learning techniques to real-world data analytics challenges and provide valuable insights.
