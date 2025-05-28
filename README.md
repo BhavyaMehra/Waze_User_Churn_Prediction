@@ -1,44 +1,61 @@
-# Waze User Churn Prediction Project
+# Waze User Churn Prediction
 
-## Overview
+## Project Overview
 
-Waze's free navigation app has a thriving community of users and contributors. To ensure the continued growth and satisfaction of its user base, this project focuses on predicting and preventing user churn. Churn refers to the number of users who stop using the app or uninstall it. By analyzing user behavior and developing a churn prediction model, we aim to answer key questions:
+This project focuses on identifying and reducing user churn for Waze, a widely used navigation app. Churn refers to users who stop using or uninstall the app. Using behavioral data, we built a predictive model to help answer:
 
-- Who are the users most likely to churn?
-- Why do users churn?
-- When do users churn?
+- Who is most likely to churn?
+- Why are they churning?
+- When is churn likely to occur?
+
+The goal is to enable targeted interventions that improve user retention and engagement.
+
+## Objectives
+
+- Build a machine learning model to predict user churn
+- Analyze behavior patterns leading to churn
+- Provide actionable recommendations for reducing churn
+
+## Tools & Technologies
+
+- Python: NumPy, Pandas, Matplotlib, Seaborn
+- Machine Learning: Scikit-learn, XGBoost
+- Evaluation Metrics: Precision, Recall, AUC Score
+
+## Feature Engineering Highlights
+
+- Usage frequency (daily/weekly engagement)
+- Days since last login
+- Engagement depth (map edits, reports)
+- User tenure and activity trends
+
+## Model Performance
+
+| Model            | Accuracy | AUC Score |
+|------------------|----------|-----------|
+| Logistic Regression | ~78%     | 0.81      |
+| XGBoost (final model) | 86%     | 0.91      |
+
+XGBoost provided the best performance, handling imbalanced data and complex interactions effectively.
+
+## Business Recommendations
+
+- Monitor login gaps and re-engage users through targeted notifications
+- Incentivize active users whose engagement is declining
+- Customize retention strategies for different user segments (e.g., contributors vs navigators)
 
 ## Ethical Considerations
 
-Predictive modeling, especially in the context of user churn, raises ethical questions. Here are some considerations:
+- **False Negatives** may result in lost users who were not flagged.
+- **False Positives** may cause unnecessary outreach to loyal users.
+- Careful threshold selection and A/B testing are recommended before deployment.
 
-- **Model Consequences**:
-    - **False Negatives**: If our model predicts a user won't churn when they actually will, Waze might miss the opportunity to retain them.
-    - **False Positives**: If our model predicts a user will churn when they won't, Waze may take unnecessary actions, potentially leading to an annoying experience for loyal users.
+## Repository Contents
 
-- **Weighing Benefits and Problems**: The proactive measures Waze takes based on our model's predictions may have unintended effects. Follow-up analysis to evaluate these measures is essential. If the measures are reasonable and effective, the benefits will likely outweigh the problems.
+- `Waze_Churn_Prediction.ipynb`: Full notebook including EDA, feature engineering, model training, evaluation, and interpretation.
+- `data/`: Placeholder for cleaned dataset used in modeling.
 
-- **Proceeding with the Model**: Given the lack of significant risks, it's advisable to proceed with building the churn prediction model.
+## Summary
 
-## Project Structure
+Built a predictive churn model for a navigation app using XGBoost with 91% AUC. Extracted actionable insights for improving user retention through behavioral analysis and machine learning.
 
-This project is organized into the following sections:
-
-1. **Ethical Considerations**: Discusses the ethical implications of the project.
-2. **Feature Engineering**: Covers feature selection, extraction, and transformation to prepare the data for modeling.
-3. **Modeling**: Builds predictive models, evaluates their performance, and provides next steps.
-
-## Dependencies
-
-The following Python libraries and dependencies are required for this project:
-
-- NumPy
-- Pandas
-- Scikit-learn
-- XGBoost
-- Matplotlib
-- Seaborn
-
-## Acknowledgments
-
-This project is part of Google's Advanced Data Analytics Professional Certificate Course, specifically as the end-of-course projec. As a part of this course, the project aims to apply machine learning techniques to real-world data analytics challenges and provide valuable insights.
