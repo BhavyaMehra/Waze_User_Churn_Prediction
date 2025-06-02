@@ -53,7 +53,7 @@ XGBoost provided the best performance, handling imbalanced data and complex inte
 ## Repository Contents
 
 - `Waze_Churn_Prediction.ipynb`: Full notebook including EDA, feature engineering, model training, evaluation, and interpretation.
-- `data/`: Placeholder for cleaned dataset used in modeling.
+- `waze_dataset.csv`: Placeholder for cleaned dataset used in modeling.
 
 ## Summary
 
