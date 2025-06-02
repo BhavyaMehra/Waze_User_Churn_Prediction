@@ -54,6 +54,7 @@ XGBoost provided the best performance, handling imbalanced data and complex inte
 
 - `Waze_Churn_Prediction.ipynb`: Full notebook including EDA, feature engineering, model training, evaluation, and interpretation.
 - `waze_dataset.csv`: Raw data used for the project.
+- `Waze Executive Summary.pdf` : Report for non-technical stakeholders explaining findings of the project.
 
 ## Summary
 
