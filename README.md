@@ -41,16 +41,6 @@ The goal is to enable targeted interventions that improve user retention and eng
 
 ---
 
-## Model Performance
-| Model               | Accuracy | AUC Score |
-|--------------------|----------|-----------|
-| Logistic Regression| ~78%     | 0.81      |
-| **XGBoost**         | **86%**  | **0.91**  |
-
-XGBoost provided the best performance, handling imbalanced data and complex interactions effectively.
-
----
-
 ## Most Predictive Features
 Based on the model's internal feature importance metrics (from XGBoost):
 
