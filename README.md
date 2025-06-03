@@ -79,4 +79,4 @@ These features provided strong predictive power by highlighting early disengagem
 ---
 
 ## Summary
-Built a predictive churn model for a navigation app using XGBoost with 91% AUC. Extracted actionable insights from behavioral signals like login gaps and session frequency to support targeted user retention strategies.
+Built a predictive churn model for a navigation app using XGBoost with 50% recall. Extracted actionable insights from behavioral signals like login gaps and session frequency to support targeted user retention strategies.
