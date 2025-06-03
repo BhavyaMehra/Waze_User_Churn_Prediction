@@ -12,7 +12,7 @@ The goal is to enable targeted interventions that improve user retention and eng
 ---
 
 ## Ethical Considerations
-- **False Negatives**: May lead to overlooked users who are at risk of churning. (Chosen metric to track in different models)
+- **False Negatives**: May lead to overlooked users who are at risk of churning. (Recall is the chosen metric to track in different models)
 - **False Positives**: Could result in unnecessary messaging to loyal users.  
 - **Responsible Deployment**: A/B testing and careful threshold tuning are recommended to balance business outcomes with user experience.
 
