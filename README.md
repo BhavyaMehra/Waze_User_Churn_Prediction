@@ -37,7 +37,32 @@ The goal is to enable targeted interventions that improve user retention and eng
 - **Days since last login** (login gap detection)  
 - **Engagement depth** (e.g., map edits, user reports)  
 - **User tenure and long-term activity trends**  
-- **Driving behavior metrics**: km per drive, per day, and per session  
+- **Driving behavior metrics**: km per drive, per day, and per session
+
+---
+
+## Additional Numerical Insights
+- **Churn Rate**: ~18% of users were labeled as churned.  
+- **Professional Drivers**: Users with ≥60 drives and ≥15 active days had better retention. (Created our own feature) 
+- **Engagement Metrics**:  
+  - `km_per_driving_day`: Median ≈ 273 km  
+  - `percent_sessions_in_last_month`: Median ≈ 0.42  
+  - `total_sessions_per_day`: Most users averaged <1 session/day 
+  - `km_per_drive`: Median ≈ 72 km, Mean ≈ 233 km
+ 
+---
+
+## Modeling Summary
+
+### Model Comparison
+- Two models (Random Forest and XGBoost) were tuned using GridSearchCV with recall as the focus.
+- XGBoost outperformed Random Forest with ~70% higher recall.
+
+### Performance Metrics
+- Final XGBoost model: ~50% recall, ~30% precision, with similar accuracy.
+
+### Threshold Tuning
+- Default threshold (0.5) was lowered to 0.204 to meet the recall target of 0.50, accepting lower precision/accuracy.
 
 ---
 
@@ -49,17 +74,6 @@ Based on the model's internal feature importance metrics (from XGBoost):
 - **`n_days_after_onboarding`**: Users churning shortly after onboarding are common.  
 
 These features provided strong predictive power by highlighting early disengagement behavior.
-
----
-
-## Additional Numerical Insights
-- **Churn Rate**: ~18% of users were labeled as churned.  
-- **Professional Drivers**: Users with ≥60 drives and ≥15 active days had better retention. (Created our own feature) 
-- **Engagement Metrics**:  
-  - `km_per_driving_day`: Median ≈ 273 km  
-  - `percent_sessions_in_last_month`: Median ≈ 0.42  
-  - `total_sessions_per_day`: Most users averaged <1 session/day 
-  - `km_per_drive`: Median ≈ 72 km, Mean ≈ 233 km  
 
 ---
 
