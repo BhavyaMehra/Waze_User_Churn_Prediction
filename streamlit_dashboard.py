@@ -14,10 +14,15 @@ st.markdown(
         <b>What is this?</b><br>
         This dashboard shows how we predict which Waze (Navigation app) users are likely to stop using the app (churn) and what factors matter most.<br><br>
         <b>Why does it matter?</b><br>
-        Predicting churn helps Waze keep more users engaged and improve retention.
-        <br><br>
+        Predicting churn helps Waze keep more users engaged and improve retention.<br><br>
         <b>What will you see?</b><br>
-        Key data cleaning steps, churn rates, top features, model results, and business recommendations.
+        <ul style='display: inline-block; text-align: left; margin: 0 auto;'>
+            <li>Data cleaning and Feature engineering to create new user behavior metrics</li>
+            <li>Churn rates and key features analysis</li>
+            <li>Modeling with <b>Random Forest</b> and <b>XGBoost</b></li>
+            <li>Threshold tuning to improve <b>Recall</b> from 17% to 50%</li>
+            <li>Actionable business recommendations</li>
+        </ul>
     </div>
     <hr style='margin-bottom: 1.5em;'>
     """,
@@ -127,7 +132,7 @@ Our main metric is **Recall** (how well we identify users who actually churn).
     st.dataframe(performance_table, use_container_width=True)
 
     st.markdown("""
-- **Threshold tuning** increased recall to 50%, allowing us to identify half of all churners, at the cost of lower precision and accuracy.
+- **Threshold tuning** increased recall from 17% to 50% i.e 300% improvement, allowing us to identify half of all churners, at the cost of lower precision and accuracy.
 - In this business case, recall is prioritized over precision.
 """)
 
@@ -189,10 +194,10 @@ st.markdown(
     <h2 style='text-align: center;'>Conclusion & Business Insights</h2>
     <div style='text-align: center; font-size: 1.1em;'>
         <ul style='display: inline-block; text-align: left;'>
-            <li><b>Churn is relatively rare (18%)</b>, but identifying at-risk users is crucial for long-term retention and business growth.</li>
-            <li><b>Recall-focused models</b> help catch more churners, even if some loyal users are mistakenly flagged. This approach is justified in our business context, where missing a potential churner is more costly than a false alarm.</li>
-            <li><b>Key drivers of churn:</b> low activity days, not being a professional driver, fewer driving days, low km per driving day, and low total sessions per day. Focus retention efforts on users with these patterns.</li>
-            <li><b>Action:</b> Target users with low engagement or infrequent driving for retention campaigns, and monitor the impact of these interventions over time.</li>
+            <li><b>Churn rate is 18%:</b> This is a significant risk for user retention and business growth, highlighting the need for proactive intervention.</li>
+            <li>Our analysis shows that users with low activity, not being professional drivers, and infrequent driving are most at risk of churning.</li>
+            <li>By tuning the probability decision threshold, we <b>improved recall by 3 times</b> from 17% to 50%, enabling us to identify many more at-risk users, though with some trade-off in precision.</li>
+            <li><b>Recommendations:</b> Focus retention efforts on low-engagement users with targeted campaigns, monitor the impact of these interventions, and continue refining the model for even better performance.</li>
         </ul>
         <br>
         <i>For more details, see the full project notebook on <a href='https://github.com/BhavyaMehra/Waze_User_Churn_Prediction/tree/main' target='_blank'>GitHub</a>.</i>
